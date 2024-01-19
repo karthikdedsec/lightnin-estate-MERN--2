@@ -5,11 +5,19 @@ import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import { useState } from "react";
 
 function App() {
+  const [sidebar, setSidebar] = useState(false);
+  const changeSidebar = () => {
+    setSidebar(!sidebar);
+  };
   return (
     <BrowserRouter>
-      <Header />
+      <Header changeSidebar={changeSidebar} />
+      {sidebar && <Sidebar />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

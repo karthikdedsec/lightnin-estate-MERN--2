@@ -1,7 +1,8 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-function Header() {
+
+function Header({ changeSidebar }) {
   return (
     <header className=" bg-slate-200 shadow-md ">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
@@ -37,7 +38,10 @@ function Header() {
               </li>
             </Link>
           </ul>
-          <GiHamburgerMenu className="sm:hidden text-slate-600 active:text-slate-300" />
+          <GiHamburgerMenu
+            onClick={changeSidebar}
+            className="sm:hidden text-slate-600 active:text-slate-300"
+          />
         </div>
       </div>
     </header>
