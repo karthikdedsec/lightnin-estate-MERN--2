@@ -10,6 +10,7 @@ import { useState } from "react";
 import PrivateRoute from "./components/PrivateRoute";
 import CreateListing from "./pages/CreateListing";
 import UpdateListing from "./pages/UpdateListing";
+import Listing from "./pages/Listing";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           />
         </Route>
 
+        <Route path="/listing/:listingId" element={<Listing />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
       </Routes>
