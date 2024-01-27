@@ -235,7 +235,7 @@ function Search() {
       </div>
 
       {/* listing */}
-      <div className="w-full">
+      <div className="w-full ">
         <h1 className="text-3xl font-semibold border-b p-3 text-slate-700 mt-5">
           listing Results:
         </h1>

@@ -50,14 +50,14 @@ function Header({ changeSidebar }) {
           </button>
         </form>
         <div>
-          <ul className="sm:flex gap-4 hidden ">
+          <ul className="sm:flex gap-4 pl-6">
             <Link to="/">
-              <li className="hover:text-slate-500 hover:cursor-pointer">
+              <li className="hover:text-slate-500 hover:cursor-pointer hidden sm:block">
                 Home
               </li>
             </Link>
             <Link to="about">
-              <li className="hover:text-slate-500 hover:cursor-pointer">
+              <li className="hover:text-slate-500 hover:cursor-pointer hidden sm:block">
                 About
               </li>
             </Link>
@@ -75,10 +75,10 @@ function Header({ changeSidebar }) {
               )}
             </Link>
           </ul>
-          <GiHamburgerMenu
+          {/* <GiHamburgerMenu
             onClick={changeSidebar}
             className="sm:hidden text-slate-600 active:text-slate-300"
-          />
+          /> */}
         </div>
       </div>
     </header>
